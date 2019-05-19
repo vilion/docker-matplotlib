@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  matplotlib:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: virtualion/matplotlib
+    ports:
+      - "2222:22"
+    container_name: matplotlib
+    tty: true
+    stdin_open: true
