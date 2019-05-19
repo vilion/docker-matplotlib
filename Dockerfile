@@ -13,10 +13,9 @@ RUN apt-get install -y --no-install-recommends debconf-utils && \
 RUN apt-get install -y --no-install-recommends openssh-server && \
     echo PermitRootLogin yes >> /etc/ssh/sshd_config  && \
     echo X11UseLocalhost no >> /etc/ssh/sshd_config  && \
-    echo "sshd:ALL" >> /etc/hosts.allow && \
     echo "root:root" | chpasswd
 
 # ssh 用のポートを開ける。
 EXPOSE 22
 
-CMD service ssh start && /bin/bash
+CMD service ssh start && sleep infinity
