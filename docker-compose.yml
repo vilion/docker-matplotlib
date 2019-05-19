@@ -10,3 +10,5 @@ services:
     container_name: matplotlib
     tty: true
     stdin_open: true
+    volumes:
+      - ./:/tmp
